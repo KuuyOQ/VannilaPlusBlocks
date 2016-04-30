@@ -1,0 +1,16 @@
+[
+{
+  "modid": "kuuymeta",
+  "name": "VannilaAddtionalBlocks",
+  "description": "Vannila plus Blocks",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["kuuy3"],
+  "credits": "",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
