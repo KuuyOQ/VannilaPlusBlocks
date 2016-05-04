@@ -6,8 +6,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import kuuy.addtional.Main;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockBreakable;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockIce;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,12 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
-public class ColoredIce extends BlockBreakable {
+public class ColoredIce extends BlockIce {
 
 	private IIcon[] iicon = new IIcon[16];
 
 	public ColoredIce() {
-		super("ice", Material.ice, false);
 		this.setCreativeTab(Main.tabkuuy);
 		this.setHardness(0.2F);
 		this.setResistance(10.0F);

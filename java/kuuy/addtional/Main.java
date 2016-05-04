@@ -45,7 +45,7 @@ public class Main {
 
 	public static final String MODID = "kuuymeta";
 	public static final String MODNAME = "VannilaAddtionalBlocks";
-	public static final String VERSION = "1.1a";
+	public static final String VERSION = "1.1b";
 	public static Item Brc;
 	public static Main instance;
 	public static ItemST STT;
@@ -116,7 +116,7 @@ public void parInit(FMLPreInitializationEvent event)
 	GameRegistry.registerItem(IDF, "IDF");
 	PAW = EnumHelper.addToolMaterial("PAW", 3, 3, 50F, 0.5F, 30)
 	.setRepairItem(new ItemStack(Main.paw));
-	
+
 	//commentout pawpackaxe WIP
     /*pawpickaxe = new Pawpickaxe(PAW)
     .setCreativeTab(Main.tabkuuyitem)
@@ -182,7 +182,7 @@ public void parInit(FMLPreInitializationEvent event)
 	.setUnlocalizedName("Brc")
 	.setTextureName("kuuymeta:brc");
 	GameRegistry.registerItem(Brc, "Brc");
-	
+
 	/*
 	 * Items
 	 */
@@ -212,7 +212,7 @@ public void parInit(FMLPreInitializationEvent event)
 	.setUnlocalizedName("pawglass")
 	.setTextureName("kuuymeta:pawglass");
 	GameRegistry.registerItem(pawglass, "pawglass");
-	
+
 	/*
 	 * Recipes
 	 */
@@ -275,7 +275,7 @@ public void parInit(FMLPreInitializationEvent event)
 	GameRegistry.addShapelessRecipe(new ItemStack(Main.pawuper,64),
 			new ItemStack(Items.redstone), new ItemStack(Items.dye,1,OreDictionary.WILDCARD_VALUE), new ItemStack(Items.iron_ingot));
 	GameRegistry.addShapelessRecipe(new ItemStack(Main.pawglass,64),
-			new ItemStack(Items.redstone), new ItemStack(Items.dye,1,OreDictionary.WILDCARD_VALUE), new ItemStack(Items.coal,1,OreDictionary.WILDCARD_VALUE));    
+			new ItemStack(Items.redstone), new ItemStack(Items.dye,1,OreDictionary.WILDCARD_VALUE), new ItemStack(Items.coal,1,OreDictionary.WILDCARD_VALUE));
 	 //Settings Oredictionary
 	OreDictionary.registerOre("hammer", new ItemStack(Main.STT, 1, 32767));
 	OreDictionary.registerOre("hammer", new ItemStack(Main.IHM, 1, 32767));
@@ -289,11 +289,57 @@ public void parInit(FMLPreInitializationEvent event)
 	OreDictionary.registerOre("saw", new ItemStack(Main.IIS, 1, 32767));
 	OreDictionary.registerOre("saw", new ItemStack(Main.IDS, 1, 32767));
 	//Block Recipes
+	//tile9
+	GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 0), new Object[]{ "ABC", "   ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 1), new Object[]{ "ABA", "C  ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 2), new Object[]{ "AB ", "C  ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 3), new Object[]{ " AB", " C ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 4), new Object[]{ "AC ", "B  ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 5), new Object[]{ "BC ", "A  ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 6), new Object[]{ "AC ", "   ", "B  ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 7), new Object[]{ "BC ", "   ", "A  ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 8), new Object[]{ "A  ", " BC", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 9), new Object[]{ "B  ", " AC", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 10), new Object[]{ "A  ", "   ", "CB ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 11), new Object[]{ "B  ", "   ", "CA ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 12), new Object[]{ "A  ", " CB", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 13), new Object[]{ "B  ", " CA", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 14), new Object[]{ "A  ", "  C", "  B", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles9, 2, 15), new Object[]{ "B  ", "  C", "  A", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawup), Character.valueOf('B'), new ItemStack(Blocks.stained_hardened_clay,1,0)}));
+	//tile8
+	GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,0),"AB ","   ","   ",'A',Main.paw,'B',Blocks.stained_hardened_clay);
+	GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,1)," AB","   ","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,2),"A  ","B  ","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,3),"A  "," B ","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,4),"B  ","A  ","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,5),"A  ","   ","B  ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,6),"A  "," B ","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,7),"B  "," A ","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,8),"A  ","  B","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,9),"B  ","  A","   ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,10),"A  ","   "," B ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,11),"B  ","   "," A ",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,12),"A  ","   ","  B",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,13),"B  ","   ","  A",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,14),"   ","A  ","  B",'A',Main.paw,'B',Blocks.ice);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles8,2,15),"B  ","   ","  A",'A',Main.paw,'B',Blocks.ice);
 	//tile7
 	GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,0),"AB ","   ","   ",'A',Main.pawglass,'B',Blocks.sand);
 	GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,1)," AB","   ","   ",'A',Main.pawglass,'B',Blocks.sand);
     GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,2),"A  ","B  ","   ",'A',Main.pawglass,'B',Blocks.sand);
     GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,3),"A  "," B ","   ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,4),"B  ","A  ","   ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,5),"A  ","   ","B  ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,6),"A  "," B ","   ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,7),"B  "," A ","   ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,8),"A  ","  B","   ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,9),"B  ","  A","   ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,10),"A  ","   "," B ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,11),"B  ","   "," A ",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,12),"A  ","   ","  B",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,13),"B  ","   ","  A",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,14),"   ","A  ","  B",'A',Main.pawglass,'B',Blocks.sand);
+    GameRegistry.addRecipe(new ItemStack(Main.kuytiles7,2,15),"B  ","   ","  A",'A',Main.pawglass,'B',Blocks.sand);
 	//tile6
     GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles6, 2, 0), new Object[]{ "ABC", "   ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawuper), Character.valueOf('B'), new ItemStack(Blocks.stone)}));
     GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Main.kuytiles6, 2, 1), new Object[]{ "ABA", "C  ", "   ", Character.valueOf('C'), "hammer", Character.valueOf('A'), new ItemStack(Main.pawuper), Character.valueOf('B'), new ItemStack(Blocks.stone)}));
