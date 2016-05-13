@@ -6,7 +6,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import kuuy.addtional.Main;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -14,17 +13,17 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
-public class Coloredglass extends BlockBreakable {
+public class ColoredFactory extends Block {
 
 	private IIcon[] iicon = new IIcon[16];
 
-	public Coloredglass() {
-		super("ice", Material.ice, false);
-		this.setCreativeTab(Main.tabkuuylight);
-		this.setHardness(0.5F);
+	public ColoredFactory() {
+		super(Material.iron);
+		this.setCreativeTab(Main.tabkuuy);
+		this.setHardness(1.0F);
 		this.setResistance(10.0F);
-		this.setStepSound(Block.soundTypeGlass);
-		this.setHarvestLevel("pickaxe", 0);
+		this.setStepSound(Block.soundTypeMetal);
+		this.setHarvestLevel("pickaxe", 1);
 		this.setLightLevel(0.0F);
 	}
 
@@ -54,26 +53,5 @@ public class Coloredglass extends BlockBreakable {
 	public int damageDropped(int meta) {
 		return meta;
 	}
-
-
-	@Override
-    public boolean isOpaqueCube() {
-       return false;
-    }
-
-	public boolean renderAsNormalBlock()
-    {
-        return false;
-    }
-	
-	
-	
-	@SideOnly(Side.CLIENT)
-    public int getRenderBlockPass()
-    {
-        return 1;
-    }
-	
-	
 
 }

@@ -8,6 +8,8 @@ public class Kuyitemtab extends CreativeTabs {
  
 	public Kuyitemtab(String label) {
 		super(label);
+		this.setBackgroundImageName("kuuyitemtab.png");
+        this.setNoTitle();
 	}
  
 	@Override
